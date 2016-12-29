@@ -13,8 +13,9 @@ pass = "XXXXXXXXXXX"
 tw = TwitterMechanize::init id,pass
 
 
-# Tweet
 tw.tweet "Hello!"
+#  => tweet succeed : "Hello!" => https://twitter.com/emilsoyiat/status/XXXXXXXXXXXXXXXXXX
+
 ```
 
 ## License
