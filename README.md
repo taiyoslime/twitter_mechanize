@@ -14,7 +14,7 @@ tw = TwitterMechanize::init id,pass
 
 
 tw.tweet "Hello!"
-#  => tweet succeed : "Hello!" => https://twitter.com/emilsoyiat/status/XXXXXXXXXXXXXXXXXX
+#  => tweet succeed : "Hello!" => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
 
 ```
 

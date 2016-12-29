@@ -1,9 +1,8 @@
 require 'mechanize'
+require_relative "errors "
 
 module TwitterMechanize
 	class Agent
-		class TweetError < StandardError; end
-
 		def initialize id,password
 			@agent = auth(id,password)
 		end
