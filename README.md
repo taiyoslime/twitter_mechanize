@@ -9,7 +9,6 @@ id = "XXXXXXXXXXX"
 # password
 pass = "XXXXXXXXXXX"
 
-# Returns nil if authorization has failed.
 tw = TwitterMechanize::init id,pass
 
 
