@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["taiyoslime"]
   spec.email         = ["hase.tekitou@gmail.com"]
 
-  spec.summary       = "Write a short summary, because Rubygems requires one."
+  spec.summary       = "Can tweet without Twitter API"
   spec.description   = "Write a longer description or delete this line."
   spec.homepage      = "https://twitter.com/taiyoslime"
   spec.license       = "MIT"
