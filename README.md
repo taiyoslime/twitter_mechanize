@@ -3,10 +3,16 @@
 ## Installation
 
 ```
+# gem install specific_install
 gem specific_install -l 'git://github.com/taiyoslime/twitter_mechanize'
 ```
 
-or just clone this repository and then exectute `bundle install`.
+or add the following to your Gemfile :
+```
+gem 'twitter_mechanize', github: "taiyoslime/twitter_mechanize"
+```
+
+and then exectute `bundle`.
 
 ## Usage
 

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["hase.tekitou@gmail.com"]
 
   spec.summary       = "Can tweet without Twitter API"
-  spec.description   = "Write a longer description or delete this line."
+  spec.description   = "Can tweet without Twitter API"
   spec.homepage      = "https://twitter.com/taiyoslime"
   spec.license       = "MIT"
 
