@@ -4,7 +4,7 @@
 
 ```
 # gem install specific_install
-gem specific_install -l 'git://github.com/taiyoslime/twitter_mechanize'
+gem specific_install https://github.com/taiyoslime/twitter_mechanize
 ```
 
 or add the following to your Gemfile :
