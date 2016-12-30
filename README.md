@@ -17,6 +17,7 @@ and then exectute `bundle`.
 ## Usage
 
 ```ruby
+require "twitter_mechanize"
 
 # twitter_id or email
 id = "XXXXXXXXXXX"
@@ -25,9 +26,8 @@ pass = "XXXXXXXXXXX"
 
 tw = TwitterMechanize::init id,pass
 
-
 tw.tweet "Hello!"
-#  => tweet succeed : "Hello!" => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
+#  => Tweet successful : "Hello!" => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
 
 ```
 
@@ -35,7 +35,7 @@ tw.tweet "Hello!"
 
 ```shell
 $ twitter_mechanize "Hello!" --id="XXXXXXXXXXX" --pass="XXXXXXXXXXXX"
-#  => tweet succeed : "Hello!" => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
+#  => Tweet successful : Hello! => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
 ```
 
 ## License

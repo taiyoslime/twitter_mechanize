@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'thor'
+require "thor"
 require_relative "../lib/twitter_mechanize"
 
 module TwitterMechanize

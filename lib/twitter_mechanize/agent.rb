@@ -1,4 +1,4 @@
-require 'mechanize'
+require "mechanize"
 require_relative "errors"
 
 module TwitterMechanize
@@ -14,13 +14,9 @@ module TwitterMechanize
 			@agent.submit form
 			returi = @agent.page.uri
 			raise TweetError,"Failed to send tweet. Please retry." if returi.path != "/intent/tweet/complete"
-			p "tweet succeed : #{text} => https://twitter.com/emilsoyiat/status/#{Hash[URI::decode_www_form(returi.query)]["latest_status_id"]}"
+			p "Tweet successful : #{text} => https://twitter.com/emilsoyiat/status/#{Hash[URI::decode_www_form(returi.query)]["latest_status_id"]}"
 		end
 
-		def isLoggedin?
-			@agent.get "https://twitter.com/login/"
-			@agent.page.uri.to_s == "https://twitter.com/" ? true : false
-		end
 
 		private
 		def auth id,password
@@ -33,7 +29,13 @@ module TwitterMechanize
 			form.field_with(name:"session[username_or_email]").value = id
 			form.field_with(name:"session[password]").value = password
 			agent.submit form
+			raise AuthError,"Authorization failed." unless isLoggedin? agent
 			agent
+		end
+
+		def isLoggedin? _agent
+			_agent.get "https://twitter.com/login/"
+			_agent.page.uri.to_s == "https://twitter.com/" ? true : false
 		end
 	end
 
