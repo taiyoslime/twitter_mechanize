@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require_relative "../lib/twitter_mechanize"
+
+module TwitterMechanize
+	class CLI < Thor
+		desc "tweet TEXT","Just send a tweet"
+		option :id,required:true,type: :string
+		option :pass,required:true,type: :string
+		def tweet text
+			tw = TwitterMechanize::init options[:id],options[:pass]
+			tw.tweet text
+		end
+	end
+end
+
+TwitterMechanize::CLI.start

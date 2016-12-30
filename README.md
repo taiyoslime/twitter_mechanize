@@ -1,5 +1,13 @@
 # TwitterMechanize
 
+## Installation
+
+```
+gem specific_install -l 'git://github.com/taiyoslime/twitter_mechanize'
+```
+
+or just clone this repository and then exectute `bundle install`.
+
 ## Usage
 
 ```ruby
@@ -15,6 +23,13 @@ tw = TwitterMechanize::init id,pass
 tw.tweet "Hello!"
 #  => tweet succeed : "Hello!" => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
 
+```
+
+#### CLI
+
+```shell
+$ twitter_mechanize "Hello!" --id="XXXXXXXXXXX" --pass="XXXXXXXXXXXX"
+#  => tweet succeed : "Hello!" => https://twitter.com/#{twitter_id}/status/XXXXXXXXXXXXXXXXXX
 ```
 
 ## License

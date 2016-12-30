@@ -1,5 +1,5 @@
 require 'mechanize'
-require_relative "errors "
+require_relative "errors"
 
 module TwitterMechanize
 	class Agent
@@ -8,12 +8,13 @@ module TwitterMechanize
 		end
 
 		def tweet text
+			raise TweetError,"Text is empty." if text == ""
 			page = @agent.get "https://twitter.com/intent/tweet?text=#{text}"
 			form = page.form_with(action:"/intent/tweet")
 			@agent.submit form
 			returi = @agent.page.uri
 			raise TweetError,"Failed to send tweet. Please retry." if returi.path != "/intent/tweet/complete"
-			p "tweet succeed : \"#{text}\" => https://twitter.com/emilsoyiat/status/#{Hash[URI::decode_www_form(returi.query)]["latest_status_id"]}"
+			p "tweet succeed : #{text} => https://twitter.com/emilsoyiat/status/#{Hash[URI::decode_www_form(returi.query)]["latest_status_id"]}"
 		end
 
 		def isLoggedin?
